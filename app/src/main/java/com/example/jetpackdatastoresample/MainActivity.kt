@@ -31,7 +31,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackDatastoreSampleTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
@@ -56,17 +55,6 @@ fun AppScreen(prefs: Prefs) {
         )
 
         PreferencesDataStoreScreen(prefs)
-
-        Text(
-            modifier = Modifier
-                .padding(top = 24.dp, start = 8.dp, end = 8.dp, bottom = 8.dp)
-                .fillMaxWidth(),
-            text = "Proto DataStore",
-            textAlign = TextAlign.Center,
-            fontSize = 24.sp
-        )
-
-        ProtoDataStoreScreen()
     }
 }
 
@@ -146,9 +134,3 @@ fun PreferencesDataStoreScreen(prefs: Prefs) {
         }
     }
 }
-
-@Composable
-fun ProtoDataStoreScreen() {
-    // TODO: Not implemented yet
-}
-
